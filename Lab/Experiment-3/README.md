@@ -1,364 +1,165 @@
-````md
+EXPERIMENT 3 REPORT
+Deploying NGINX Using Different Base Images
+🔹 AIM
 
-\# Experiment 3
+To deploy NGINX using different base images (Official, Ubuntu, Alpine) and compare their image size, layers, and performance.
 
+🔹 PREREQUISITES
+Docker installed and running
+Basic knowledge of Docker commands
+🔹 PART 1: OFFICIAL NGINX IMAGE
+Step 1: Pull NGINX Image
+docker pull nginx:latest
 
+<img width="1920" height="1080" alt="Screenshot (547)" src="https://github.com/user-attachments/assets/c9ebdc62-fbe3-485a-be23-d93a03204436" />
 
-\## Title
 
-Deploying Web Applications with Docker
 
+Step 2: Run Container
+docker run -d --name nginx-official -p 8080:80 nginx
 
+📸 [Add Screenshot]
 
-\## Name
+Step 3: Verify Output
 
-Jaspinder Kaur
+Open browser:
+👉 http://localhost:8080
 
+📸 [Add Screenshot of NGINX Welcome Page]
 
+Step 4: Check Image Size
+docker images nginx
 
-\---
+📸 [Add Screenshot]
 
+🔹 PART 2: UBUNTU-BASED NGINX
+Step 1: Create Folder
+mkdir nginx-ubuntu
+cd nginx-ubuntu
 
+📸 [Add Screenshot]
 
-\## Objective
+Step 2: Create Dockerfile
+FROM ubuntu:22.04
 
-This experiment demonstrates how to deploy a simple web application using Docker.  
+RUN apt-get update && \
+    apt-get install -y nginx && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-A Flask-based web app is containerized using a Dockerfile, built into an image, and deployed inside a running container.
+EXPOSE 80
 
+CMD ["nginx", "-g", "daemon off;"]
 
+📸 [Add Screenshot of Dockerfile]
 
-\---
+Step 3: Build Image
+docker build -t nginx-ubuntu .
 
+📸 [Add Screenshot]
 
+Step 4: Run Container
+docker run -d --name nginx-ubuntu -p 8081:80 nginx-ubuntu
 
-\## Technologies Used
+📸 [Add Screenshot]
 
-\- Python (Flask)
+Step 5: Verify Output
 
-\- Docker
+👉 http://localhost:8081
 
-\- Command Prompt / Terminal
+📸 [Add Screenshot]
 
+Step 6: Check Image Size
+docker images nginx-ubuntu
 
+📸 [Add Screenshot]
 
-\---
+🔹 PART 3: ALPINE-BASED NGINX
+Step 1: Create Folder
+cd ..
+mkdir nginx-alpine
+cd nginx-alpine
 
+📸 [Add Screenshot]
 
+Step 2: Create Dockerfile
+FROM alpine:latest
 
-\## Theory
+RUN apk add --no-cache nginx
 
-Docker allows applications to be packaged along with their dependencies into containers.  
+EXPOSE 80
 
-Using Docker, web applications can be deployed consistently across different environments without dependency issues.
+CMD ["nginx", "-g", "daemon off;"]
 
+📸 [Add Screenshot]
 
+Step 3: Build Image
+docker build -t nginx-alpine .
 
-\---
+📸 [Add Screenshot]
 
+Step 4: Run Container
+docker run -d --name nginx-alpine -p 8082:80 nginx-alpine
 
+👉 If not working (used in your case):
 
-\## Procedure
+docker run -d --name nginx-alpine-fixed -p 8082:80 nginx:alpine
 
+📸 [Add Screenshot]
 
+Step 5: Verify Output
 
-\### Step 1: Create Project Folder
+👉 http://localhost:8082
 
-```bash
+📸 [Add Screenshot]
 
-mkdir Experiment-3-WebApp
+Step 6: Check Image Size
+docker images nginx-alpine
 
-cd Experiment-3-WebApp
+📸 [Add Screenshot]
 
-````
+🔹 PART 4: CUSTOM HTML USING VOLUME
+Step 1: Create HTML Folder
+cd ..
+mkdir html
+cd html
 
+📸 [Add Screenshot]
 
+Step 2: Create HTML File
+notepad index.html
+<h1>Hello from Docker NGINX 🚀</h1>
+<p>This is my custom page</p>
 
-\---
+📸 [Add Screenshot]
 
+Step 3: Run Container with Volume
+docker run -d -p 8083:80 -v ${PWD}/html:/usr/share/nginx/html nginx
 
+📸 [Add Screenshot]
 
-\### Step 2: Create Flask App (app.py)
+Step 4: Verify Output
 
+👉 http://localhost:8083
 
+📸 [Add Screenshot of Custom Page]
 
-```python id="5n1xwz"
+🔹 IMAGE COMPARISON
+Step: Compare All Images
+docker images | findstr nginx
 
-from flask import Flask
+📸 [Add Screenshot]
 
+Observations Table
+Image Type	Size	Performance
+Official	Medium	Good
+Ubuntu	Large	Slow
+Alpine	Very Small	Fast
+🔹 CONCLUSION
+Official image is best for production
+Ubuntu image is useful for debugging
+Alpine image is lightweight and fast
+Docker images differ based on base OS and layers
+🔹 RESULT
 
-
-app = Flask(\_\_name\_\_)
-
-
-
-@app.route('/')
-
-def home():
-
-&#x20;   return """
-
-&#x20;   <h1>Experiment 3: Deploying Web Applications with Docker</h1>
-
-&#x20;   <h2>Jaspinder Kaur</h2>
-
-&#x20;   """
-
-
-
-if \_\_name\_\_ == "\_\_main\_\_":
-
-&#x20;   app.run(host="0.0.0.0", port=5000)
-
-```
-
-
-
-!\[Flask Code](images/image1.png)
-
-
-
-\---
-
-
-
-\### Step 3: Create Requirements File
-
-
-
-Create `requirements.txt`:
-
-
-
-```text id="b2kq6p"
-
-flask
-
-```
-
-
-
-!\[Requirements File](images/image2.png)
-
-
-
-\---
-
-
-
-\### Step 4: Write Dockerfile
-
-
-
-```Dockerfile id="3n4z8k"
-
-FROM python:3.9-slim
-
-
-
-WORKDIR /app
-
-
-
-COPY . /app
-
-
-
-RUN pip install -r requirements.txt
-
-
-
-CMD \["python", "app.py"]
-
-```
-
-
-
-!\[Dockerfile](images/image3.png)
-
-
-
-\---
-
-
-
-\### Step 5: Build Docker Image
-
-
-
-```bash id="xv3l9p"
-
-docker build -t experiment3-webapp .
-
-```
-
-
-
-!\[Build Image](images/image4.png)
-
-
-
-\---
-
-
-
-\### Step 6: Run Docker Container
-
-
-
-```bash id="q2p9dl"
-
-docker run -d -p 8080:5000 experiment3-webapp
-
-```
-
-
-
-!\[Run Container](images/image5.png)
-
-
-
-\---
-
-
-
-\### Step 7: Verify Deployment
-
-
-
-Open in browser:
-
-
-
-```text id="c6fzqk"
-
-http://localhost:8080
-
-```
-
-
-
-!\[Output](images/image6.png)
-
-
-
-\---
-
-
-
-\### Step 8: Check Logs
-
-
-
-```bash id="yq8m2h"
-
-docker logs <container\_id>
-
-```
-
-
-
-\---
-
-
-
-\### Step 9: Stop Container
-
-
-
-```bash id="f9u2rs"
-
-docker stop <container\_id>
-
-```
-
-
-
-\---
-
-
-
-\## Commands Used
-
-
-
-```bash id="2v7c0j"
-
-docker build -t experiment3-webapp .
-
-docker run -d -p 8080:5000 experiment3-webapp
-
-docker logs <container\_id>
-
-docker stop <container\_id>
-
-```
-
-
-
-\---
-
-
-
-\## Result
-
-
-
-The Flask web application was successfully containerized and deployed using Docker.
-
-It ran correctly inside a Docker container and was accessible through a web browser.
-
-
-
-\---
-
-
-
-\## Conclusion
-
-
-
-Containerizing web applications ensures portability, consistency, and ease of deployment across environments.
-
-Docker simplifies packaging and deployment without dependency issues.
-
-
-
-\---
-
-
-
-\## Viva Questions
-
-
-
-\*\*Q1. What is Flask?\*\*
-
-Flask is a lightweight Python web framework.
-
-
-
-\*\*Q2. Why use Docker for web apps?\*\*
-
-To ensure consistent deployment across environments.
-
-
-
-\*\*Q3. What does Dockerfile do?\*\*
-
-It defines steps to build a Docker image.
-
-
-
-\*\*Q4. What is port mapping?\*\*
-
-It connects container ports to host ports.
-
-
-
-```
-
-```
-
-
-
+Successfully deployed NGINX using different base images and compared their size and performance.
