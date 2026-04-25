@@ -19,6 +19,8 @@ Step 2: Run Container
 docker run -d --name nginx-official -p 8080:80 nginx
 
 <img width="940" height="492" alt="image" src="https://github.com/user-attachments/assets/f75adc82-c172-4177-8a17-e33f8f5221b1" />
+
+
 <img width="940" height="490" alt="image" src="https://github.com/user-attachments/assets/5cbbd221-71a1-4b8c-9d01-7c9d4ea12c5c" />
 
 
@@ -75,7 +77,7 @@ Step 5: Verify Output
 
 👉 http://localhost:8081
 
-<img width="940" height="491" alt="image" src="https://github.com/user-attachments/assets/263f3253-7afa-455c-8ada-93447f6c1347" />
+
 
 
 Step 6: Check Image Size
