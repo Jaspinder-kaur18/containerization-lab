@@ -30,7 +30,8 @@ Step 3: Verify Output
 Open browser:
  http://localhost:8080
 
-<img width="940" height="494" alt="image" src="https://github.com/user-attachments/assets/a0991cfe-d929-4075-a47e-086f00266667" />
+<img width="1920" height="1080" alt="Screenshot (516)" src="https://github.com/user-attachments/assets/fe63f497-aed6-4571-b7d3-a3cf8b6377ff" />
+
 
 Step 4: Check Image Size
 docker images nginx
