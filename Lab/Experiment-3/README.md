@@ -11,8 +11,8 @@ Basic knowledge of Docker commands
 Step 1: Pull NGINX Image
 docker pull nginx:latest
 
-<img width="1920" height="1080" alt="Screenshot (547)" src="https://github.com/user-attachments/assets/c9ebdc62-fbe3-485a-be23-d93a03204436" />
 
+<img width="940" height="491" alt="image" src="https://github.com/user-attachments/assets/c86ddd33-400c-43c2-8580-4b9e1319f0b3" />
 
 
 Step 2: Run Container
