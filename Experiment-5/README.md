@@ -34,9 +34,8 @@ docker rm test-container
 docker run -it --name test-container ubuntu /bin/bash
 cat message.txt
 ```
-![images for exp 5](./images/image1.jpeg)
-![images for exp 5](./images/image2.jpeg)
-File does not exist — Data is lost.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f1be0673-55e6-4831-8a21-bed995690536" />
+
 
 
 #  Lab 2: Volume Types
@@ -48,7 +47,11 @@ docker run -d -v /app/data --name web1 nginx
 docker volume ls
 docker inspect web1 | grep -A 5 Mounts
 ```
-![images for exp 5](./images/image3.jpeg)
+<img width="959" height="500" alt="image" src="https://github.com/user-attachments/assets/e4bbe73a-ba86-4f59-acab-b53a3551cd77" />
+
+<img width="959" height="190" alt="image" src="https://github.com/user-attachments/assets/6fe83d5d-c9b1-4811-a55e-50c4c492fcdb" />
+
+
 ---
 
 ## 2. Named Volumes
@@ -59,7 +62,8 @@ docker run -d -v mydata:/app/data --name web2 nginx
 docker volume ls
 docker volume inspect mydata
 ```
-![images for exp 5](./images/image4.jpeg)
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/aee7c7fb-e7f9-4111-bbdb-e74ecfe0729d" />
+
 ---
 
 ## 3. Bind Mounts (Host Directory)
@@ -70,7 +74,14 @@ docker run -d -v ~/myapp-data:/app/data --name web3 nginx
 echo "From Host" > ~/myapp-data/host-file.txt
 docker exec web3 cat /app/data/host-file.txt
 ```
-![images for exp 5](./images/image5.jpeg)
+<img width="959" height="501" alt="image" src="https://github.com/user-attachments/assets/43f08b8c-67c3-4d1b-9215-aa1d2c1f768d" />
+
+
+<img width="959" height="501" alt="image" src="https://github.com/user-attachments/assets/5c8b9ade-c941-4020-819a-1e71c83c7f02" />
+
+
+<img width="959" height="252" alt="image" src="https://github.com/user-attachments/assets/b5fc0c1d-84c8-4e86-b1ea-9ea6caabb0d6" />
+
 
 ---
 
@@ -95,7 +106,12 @@ docker run -d \
   mysql:8.0
 ```
 
-![images for exp 5](./images/image6.jpeg)
+<img width="959" height="447" alt="image" src="https://github.com/user-attachments/assets/7b186ac2-4d4f-4c43-872d-cbe50e6993ed" />
+
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/5d46f15c-c76c-4179-a1ee-a23e7bb2923f" />
+
+<img width="959" height="506" alt="image" src="https://github.com/user-attachments/assets/671026b3-7161-4925-9532-530f47a1c605" />
+
 
 ---
 
