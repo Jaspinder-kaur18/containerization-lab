@@ -34,7 +34,8 @@ docker rm test-container
 docker run -it --name test-container ubuntu /bin/bash
 cat message.txt
 ```
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f1be0673-55e6-4831-8a21-bed995690536" />
+<img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/54802d1c-bf5a-483a-8b42-6f1de9e9a783" />
+
 
 
 
