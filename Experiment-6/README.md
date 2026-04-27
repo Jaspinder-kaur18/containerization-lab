@@ -50,6 +50,7 @@ docker run -d \
 ```
 
 This approach is imperative because the user specifies step-by-step instructions.
+
 <img width="959" height="408" alt="image" src="https://github.com/user-attachments/assets/278b0842-5f2d-4f84-9cc5-2a401d5946e5" />
 
 ---
