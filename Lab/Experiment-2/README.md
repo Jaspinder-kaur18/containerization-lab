@@ -29,6 +29,7 @@ Docker is a containerization platform that allows applications to run in isolate
 The Nginx Docker image was pulled from Docker Hub.
 
 ---
+
 <img width="1920" height="1080" alt="Screenshot (492)" src="https://github.com/user-attachments/assets/779ca4d9-f31a-4165-971c-75a22c833a17" />
 
 
