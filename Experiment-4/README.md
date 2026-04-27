@@ -25,6 +25,7 @@ cd my-flask-app
 ```
 <img width="959" height="356" alt="image" src="https://github.com/user-attachments/assets/ecc69692-b409-4c95-8726-11c90961e085" />
 
+
 ---
 
 ## Step 2: Create `app.py`
