@@ -29,31 +29,36 @@ Docker is a containerization platform that allows applications to run in isolate
 The Nginx Docker image was pulled from Docker Hub.
 
 ---
-![PULL DOCKER IMAGES ](./images/image1.jpeg)
+<img width="1920" height="1080" alt="Screenshot (492)" src="https://github.com/user-attachments/assets/779ca4d9-f31a-4165-971c-75a22c833a17" />
+
 
 ### Step 2: Run Docker Container with Port Mapping
 A Docker container was started using the Nginx image with port mapping.
 
 ---
-![RUN CONTAINER](./images/image2.jpeg)
+<img width="1920" height="1080" alt="Screenshot (493)" src="https://github.com/user-attachments/assets/f470d77a-12b6-4d1b-af87-5c6cf7ae8ef7" />
+
 
 ### Step 3: Verify Running Containers
 The list of running containers was checked.
 
 ---
-![VERIFY](./images/image3.jpeg)
-![VERIFY](./images/image4.jpeg)
+<img width="1920" height="1080" alt="Screenshot (494)" src="https://github.com/user-attachments/assets/6b7e4a98-4f3a-4b47-8d73-5c1cb98ca5bd" />
+
+<img width="1920" height="1080" alt="Screenshot (495)" src="https://github.com/user-attachments/assets/90485786-5abb-4a36-9875-6a1cfd93201e" />
+
 ### Step 4: Stop and Remove Docker Container
 The running container was stopped and removed.
 
 ---
-![STOP CONTAINER](./images/image5.jpeg)
+<img width="1920" height="1080" alt="Screenshot (501)" src="https://github.com/user-attachments/assets/32a9579c-2ef0-4a93-af56-5128dfb725e0" />
+
 
 ### Step 5: Remove Docker Image
 The Docker image was removed from the system.
 
 ---
-![REMOVE](./images/image6.jpeg)
+<img width="1920" height="1080" alt="Screenshot (513)" src="https://github.com/user-attachments/assets/37fc0af9-e0ec-451b-b4e9-b25dde66fc45" />
 
 ## Commands Used
 
