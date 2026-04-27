@@ -50,6 +50,7 @@ docker run -d \
 ```
 
 This approach is imperative because the user specifies step-by-step instructions.
+<img width="959" height="408" alt="image" src="https://github.com/user-attachments/assets/278b0842-5f2d-4f84-9cc5-2a401d5946e5" />
 
 ---
 
@@ -82,6 +83,9 @@ services:
       NGINX_HOST: localhost
     restart: unless-stopped
 ```
+<img width="1475" height="771" alt="Screenshot 2026-04-27 151350" src="https://github.com/user-attachments/assets/86c807e2-7d05-4e9a-88ad-fdc4809f951d" />
+<img width="1919" height="1008" alt="Screenshot 2026-04-27 151648" src="https://github.com/user-attachments/assets/2f14f5f9-388f-4596-9428-a8b2b8431769" />
+
 
 ---
 
@@ -149,8 +153,10 @@ Stop and remove:
 docker stop lab-nginx
 docker rm lab-nginx
 ```
-![images for exp 6](./images/image1.jpeg)
-![images for exp 6](./images/image2.jpeg)
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/35c220ff-0391-4b61-9284-db4d52d22b5c" />
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/179e90fe-3341-4e4a-aeeb-a6af088e34f9" />
+
+
 ---
 
 ### Using Docker Compose
@@ -167,7 +173,10 @@ services:
     volumes:
       - ./html:/usr/share/nginx/html
 ```
-![images for exp 6](./images/image3.jpeg)
+<img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/b2605756-4ef6-4f48-9130-16f92a12f6b1" />
+<img width="1484" height="777" alt="Screenshot 2026-04-27 151853" src="https://github.com/user-attachments/assets/6913122e-a637-4226-8d4a-e22cecd564a4" />
+<img width="1919" height="1006" alt="Screenshot 2026-04-27 152213" src="https://github.com/user-attachments/assets/a309710e-b8d0-4d20-ae06-50612794e747" />
+
 
 Run:
 
@@ -224,13 +233,17 @@ docker run -d \
   -e WORDPRESS_DB_NAME=wordpress \
   wordpress:latest
 ```
-![images for exp 6](./images/image5.jpeg)
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/d5f8d76f-fc34-4e99-9e40-682e622b94a0" />
+
+<img width="959" height="500" alt="image" src="https://github.com/user-attachments/assets/a89182ec-8ec5-483b-aefb-a0b5eb828c11" />
+<img width="959" height="114" alt="image" src="https://github.com/user-attachments/assets/eafac455-a802-436a-9739-dbe4f6fd88d3" />
 
 Access:
 
 http://localhost:8082
 
-![images for exp 6](./images/image6.jpeg)
+<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/93cc9b4f-1b25-490c-b581-f1ca385ece51" />
+
 
 ---
 
@@ -261,7 +274,10 @@ services:
 volumes:
   mysql_data:
 ```
-![images for exp 6](./images/image7.jpeg)
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/6c75557c-8e56-401a-9a63-ca5089bb4d57" />
+<img width="958" height="499" alt="image" src="https://github.com/user-attachments/assets/29975934-ab9b-4137-b067-5262a5bae0d6" />
+
+<img width="950" height="383" alt="image" src="https://github.com/user-attachments/assets/d1340d3a-6216-40ea-ba5d-b11d86e9c9b9" />
 
 Run:
 
@@ -274,7 +290,9 @@ Stop:
 ```bash
 docker compose down -v
 ```
-![images for exp 6](./images/image8.jpeg)
+<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/75d4d2b0-b8e9-4809-b71e-69a58a10d12b" />
+<img width="1919" height="1003" alt="Screenshot 2026-04-27 155713" src="https://github.com/user-attachments/assets/b907d3fe-c7c6-4aad-9d9e-cfdb4503d183" />
+
 ---
 
 # PART C – CONVERSION & RESOURCE TASKS
@@ -294,7 +312,7 @@ docker run -d \
   --restart unless-stopped \
   node:18-alpine
 ```
-![images for exp 6](./images/image10.jpeg)
+<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/a663832a-0b32-4949-b65e-af1fd1dc2f22" />
 
 Compose equivalent:
 
@@ -312,7 +330,8 @@ services:
       DEBUG: "false"
     restart: unless-stopped
 ```
-![images for exp 6](./images/image9.jpeg)
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/8c6529e5-915b-4860-855a-bf6a712c85da" />
+
 ---
 
 ## Task 4: Resource Limits Conversion
@@ -347,7 +366,12 @@ services:
           memory: 256m
           cpus: '0.5'
 ```
-![images for exp 6](./images/image12.jpeg)
+<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/ad47b9eb-e9b9-4b25-82ac-eab69ae74206" />
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/1781b110-c65f-48ca-aeb1-c71f2e44e698" />
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/5c67493b-c42b-4288-9748-1c33f8ad389f" />
+
+
+
 
 Note:  
 The `deploy` section works only in Docker Swarm mode.
@@ -369,7 +393,9 @@ http.createServer((req, res) => {
   res.end("Docker Compose Build Lab");
 }).listen(3000);
 ```
-![images for exp 6](./images/image14.jpeg)
+
+
+
 
 ### Dockerfile
 
@@ -382,7 +408,8 @@ EXPOSE 3000
 
 CMD ["node", "app.js"]
 ```
-![images for exp 6](./images/image15.jpeg)
+<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/8b5ed07d-fbca-47c7-803a-5b58c2fab445" />
+
 
 ### docker-compose.yml
 
@@ -398,7 +425,6 @@ services:
     ports:
       - "3000:3000"
 ```
-![images for exp 6](./images/image16.jpeg)
 
 Run:
 
@@ -431,7 +457,6 @@ COPY --from=builder /app/app.js .
 EXPOSE 3000
 CMD ["node", "app.js"]
 ```
-![images for exp 6](./images/image18.jpeg)
 
 Compose configuration:
 
@@ -448,11 +473,11 @@ services:
     environment:
       NODE_ENV: production
 ```
-![images for exp 6](./images/image19.jpeg)
-![images for exp 6](./images/image20.jpeg)
-![images for exp 6](./images/image21.jpeg)
----
-
+<img width="959" height="500" alt="image" src="https://github.com/user-attachments/assets/7d9eb467-e26d-48f4-abbb-5acffb8eb3ad" />
+<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/2248b199-94af-4d1d-adc1-c79540905c06" />
+<img width="959" height="500" alt="image" src="https://github.com/user-attachments/assets/1b259f36-0a94-4326-bf92-29565a2c14fb" />
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/5ce287f2-7266-4f13-b7b7-efba419bb451" />
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/3334dfeb-ee22-4fb5-a721-fb46b4da6bb0" />
 
 # Conclusion
 
