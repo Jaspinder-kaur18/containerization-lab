@@ -74,3 +74,4 @@ docker rmi nginx
 ## Result
 
 Docker images were successfully pulled, containers were executed with port mapping, and container lifecycle commands were performed successfully.
+<img width="1920" height="1080" alt="Screenshot (517)" src="https://github.com/user-attachments/assets/ba6f1f0a-fdb3-44d4-abb9-c331e0c02768" />
