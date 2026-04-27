@@ -23,7 +23,8 @@ To understand Docker containerization by:
 mkdir my-flask-app
 cd my-flask-app
 ```
-![](./images/image1.jpeg)
+<img width="959" height="356" alt="image" src="https://github.com/user-attachments/assets/ecc69692-b409-4c95-8726-11c90961e085" />
+
 ---
 
 ## Step 2: Create `app.py`
@@ -44,7 +45,8 @@ def health():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 ```
-![](./images/image2.jpeg)
+<img width="738" height="386" alt="image" src="https://github.com/user-attachments/assets/c39d696a-9eca-4668-96fb-12732ae54ec7" />
+
 ---
 
 ## Step 3: Create `requirements.txt`
@@ -52,7 +54,8 @@ if __name__ == '__main__':
 ```text
 Flask==2.3.3
 ```
-![](./images/image4.jpeg)
+<img width="752" height="392" alt="image" src="https://github.com/user-attachments/assets/2317e28c-9938-4bd2-8290-731a783a7545" />
+
 ---
 
 #  Part 2: Create Dockerfile
@@ -74,7 +77,10 @@ EXPOSE 5000
 
 CMD ["python", "app.py"]
 ```
-![](./images/image3.jpeg)
+<img width="758" height="394" alt="image" src="https://github.com/user-attachments/assets/5b15227d-df20-48e3-9dae-ef16f66a37ba" />
+<img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/61d1aebe-60e1-417f-bd2e-f58c74667c11" />
+
+
 ---
 
 # Part 3: Create `.dockerignore`
@@ -107,7 +113,8 @@ test_*.py
 ```
 
 ---
-![](./images/image5.jpeg)
+<img width="959" height="501" alt="image" src="https://github.com/user-attachments/assets/5da90601-661a-4a08-ae3b-49d28626851d" />
+
 
 # Part 4: Build Docker Image
 
@@ -122,35 +129,43 @@ docker images
 ```
 
 ---
-![](./images/image6.jpeg)
+
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/e5dd094b-1115-4ea3-9184-b47c4c284ac0" />
+<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/3b241ddf-9b09-488c-9af8-a9bad5efc432" />
+
+
 
 # ▶ Part 5: Run Container
 
 ```bash
 docker run -d -p 5000:5000 --name flask-container my-flask-app
 ```
-![](./images/image7.jpeg)
+<img width="959" height="248" alt="image" src="https://github.com/user-attachments/assets/3f0df18c-20c4-43f1-8f2f-44312c326c41" />
+
+
 
 Check running containers:
 
 ```bash
 docker ps
 ```
-![](./images/image8.jpeg)
+<img width="959" height="191" alt="image" src="https://github.com/user-attachments/assets/06034b60-b8d6-45d9-ac81-72c898aa1da1" />
+
 
 Test in browser:
 
 ```
 http://localhost:5000
 ```
-![](./images/image9.jpeg)
+<img width="959" height="426" alt="image" src="https://github.com/user-attachments/assets/99454cc9-f757-44c8-9c48-7861077d145f" />
 
 Test health endpoint:
 
 ```bash
 curl http://localhost:5000/health
 ```
-![](./images/image10.jpeg)
+<img width="959" height="497" alt="image" src="https://github.com/user-attachments/assets/08a427f3-2728-4975-9356-4edce23f0725" />
+
 
 ---
 
@@ -173,7 +188,8 @@ Remove container:
 ```bash
 docker rm -f flask-container
 ```
-![](./images/image11.jpeg)
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/b7b5fcb4-aa74-4322-bbda-98b47bb5e93c" />
+
 ---
 
 #  Part 6: Multi-Stage Build
@@ -210,7 +226,8 @@ EXPOSE 5000
 
 CMD ["python", "app.py"]
 ```
-![](./images/image12.jpeg)
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/a8fb5f78-4265-493d-86e7-feb925e44d23" />
+
 
 Build multi-stage image:
 
@@ -225,4 +242,9 @@ docker images
 ```
 
 ---
-![](./images/image13.jpeg)
+<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/073f9ad7-7f0e-4f62-9547-87ceea1d82fc" />
+<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/45247e19-2547-4bea-abd9-da02023a42dc" />
+<img width="959" height="437" alt="image" src="https://github.com/user-attachments/assets/9480aaee-a8ef-4fbe-adf7-dbb199d88912" />
+
+
+
