@@ -111,10 +111,10 @@ docker-compose up -d
 <img width="749" height="395" alt="image" src="https://github.com/user-attachments/assets/6b979ebb-1ec1-41d7-9a93-d2c88ef6a6c3" />
 <img width="959" height="167" alt="image" src="https://github.com/user-attachments/assets/043bc16e-9e79-488d-a498-a39d1aa7c94a" />
 <img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/ec779ffb-5011-4ac1-bfea-cc6e986d1198" />
-<img width="959" height="506" alt="image" src="https://github.com/user-attachments/assets/b954f275-7e0d-4361-8665-de9288f4af7e" />
-<img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/a97f0aa6-e29b-41ae-ad4c-6a6bd5bde2b6" />
-<img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/7946b9ec-9c44-46e4-a957-5b6250eb96ba" />
-<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/eba46ada-a00a-4f93-bb4d-3743a4866f23" />
+
+
+
+
 
 ---
 
@@ -132,7 +132,7 @@ docker-compose up -d
 * Selected: **Pipeline script from SCM**
 * Repo URL: `https://github.com/jaspinder-kaur18/my-app.git`
 * Script Path: `Jenkinsfile`
-
+<img width="959" height="506" alt="image" src="https://github.com/user-attachments/assets/b954f275-7e0d-4361-8665-de9288f4af7e" />
 ---
 
 ##  Step 6: Setup Webhook
@@ -143,7 +143,7 @@ docker-compose up -d
 ```
 https://your-ngrok-url/github-webhook/
 ```
-
+<img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/a97f0aa6-e29b-41ae-ad4c-6a6bd5bde2b6" />
 * Enabled push events
 
 ---
@@ -159,7 +159,7 @@ https://your-ngrok-url/github-webhook/
 * Build Docker Image
 * Login to Docker Hub
 * Push Image
-
+<img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/7946b9ec-9c44-46e4-a957-5b6250eb96ba" />
 
 ---
 
@@ -168,7 +168,7 @@ https://your-ngrok-url/github-webhook/
 
 * Tag: `latest`
 
-
+<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/eba46ada-a00a-4f93-bb4d-3743a4866f23" />
 ---
 
 ## Step 9: Run Docker Container
@@ -182,6 +182,7 @@ Open:
 ```
 http://localhost:8081
 ```
+<img width="1440" height="1484" alt="image16(1)" src="https://github.com/user-attachments/assets/162f7a2c-0e75-4dbe-ae1f-4dc66967d19b" />
 
 ---
 
