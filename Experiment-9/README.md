@@ -138,7 +138,8 @@ done
 ```
 <img width="959" height="278" alt="image" src="https://github.com/user-attachments/assets/aff0e9bb-6fdd-4a21-9f21-3814289c127f" />
 
-<img width="958" height="502" alt="image" src="https://github.com/user-attachments/assets/ca27c63f-af0f-4988-bd4f-
+<img width="1915" height="1004" alt="Screenshot 2026-04-28 112154" src="https://github.com/user-attachments/assets/cc3beb0f-0e8a-433a-ac50-4af3761158e7" />
+
 ---
 
 ###  Step 7: Create Inventory File (inventory.ini)
