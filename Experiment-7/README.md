@@ -52,7 +52,12 @@ my-app/
   * `Dockerfile`
   * `Jenkinsfile`
 
-![images for exp 7](./images/image1.jpeg)
+<img width="745" height="391" alt="image" src="https://github.com/user-attachments/assets/ed3234a0-5834-4de1-b93b-2de055c6f805" />
+<img width="760" height="395" alt="image" src="https://github.com/user-attachments/assets/bd39d0a6-61ab-416a-a120-2a74ef9a263b" />
+<img width="934" height="503" alt="image" src="https://github.com/user-attachments/assets/12ae96c3-59b8-4a82-8486-f66d3b84f60e" />
+
+
+
 
 ---
 
@@ -64,12 +69,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "CI/CD is working 🚀 - Aakriti FINAL"
+    return "CI/CD is working 🚀 - Jaspinder FINAL"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
 ```
 
+<img width="758" height="395" alt="image" src="https://github.com/user-attachments/assets/f9115951-9fe7-450e-944c-bd7e8f2cdd5d" />
 
 ---
 
@@ -85,7 +91,8 @@ git commit -m "initial commit"
 git push
 ```
 
-![images for exp 7](./images/image2.jpeg)
+<img width="821" height="241" alt="image" src="https://github.com/user-attachments/assets/a86c0d47-03a5-44a2-91bf-359ec70798f9" />
+
 
 ---
 
@@ -101,10 +108,14 @@ docker-compose up -d
 * Accessed Jenkins at:
   `http://localhost:8080`
 
-![images for exp 7](./images/image3.jpeg)
-![images for exp 7](./images/image4.jpeg)
-![images for exp 7](./images/image5.jpeg)
-![images for exp 7](./images/image6.jpeg)
+<img width="749" height="395" alt="image" src="https://github.com/user-attachments/assets/6b979ebb-1ec1-41d7-9a93-d2c88ef6a6c3" />
+<img width="959" height="167" alt="image" src="https://github.com/user-attachments/assets/043bc16e-9e79-488d-a498-a39d1aa7c94a" />
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/ec779ffb-5011-4ac1-bfea-cc6e986d1198" />
+<img width="959" height="506" alt="image" src="https://github.com/user-attachments/assets/b954f275-7e0d-4361-8665-de9288f4af7e" />
+<img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/a97f0aa6-e29b-41ae-ad4c-6a6bd5bde2b6" />
+<img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/7946b9ec-9c44-46e4-a957-5b6250eb96ba" />
+<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/eba46ada-a00a-4f93-bb4d-3743a4866f23" />
+
 ---
 
 ## Step 5: Configure Jenkins
@@ -113,19 +124,14 @@ docker-compose up -d
 
 * Added Docker Hub token
 * ID: `dockerhub-token`
-![images for exp 7](./images/image7.jpeg)
-![images for exp 7](./images/image8.jpeg)
-![images for exp 7](./images/image9.jpeg)
+
 
 
 ### ➤ Create Pipeline Job
 
 * Selected: **Pipeline script from SCM**
-* Repo URL: `https://github.com/Aakriti2312/my-app.git`
+* Repo URL: `https://github.com/jaspinder-kaur18/my-app.git`
 * Script Path: `Jenkinsfile`
-
-![images for exp 7](./images/image10.jpeg)
-![images for exp 7](./images/image11.jpeg)
 
 ---
 
@@ -139,9 +145,6 @@ https://your-ngrok-url/github-webhook/
 ```
 
 * Enabled push events
-
-![images for exp 7](./images/image12.jpeg)
-![images for exp 7](./images/image13.jpeg)
 
 ---
 
@@ -157,22 +160,21 @@ https://your-ngrok-url/github-webhook/
 * Login to Docker Hub
 * Push Image
 
-![images for exp 7](./images/image14.jpeg)
 
 ---
 
 ## Step 8: Verify on Docker Hub
 
-* Image: `aakritidhawan/myapp`
+
 * Tag: `latest`
-![images for exp 7](./images/image15.jpeg)
+
 
 ---
 
 ## Step 9: Run Docker Container
 
 ```bash
-docker run -d -p 8081:80 aakritidhawan/myapp
+docker run -d -p 8081:80 jaspinder-kaur18/myapp
 ```
 
 Open:
@@ -180,7 +182,6 @@ Open:
 ```
 http://localhost:8081
 ```
-![images for exp 7](./images/image16.jpeg)
 
 ---
 
